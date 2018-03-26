@@ -41,7 +41,7 @@ function muestraPass() {
  		<div class="container">
  			<div class="row">
  				<div class="col-sm-8 col-sm-offset-3">
- 					<h2>AESYSTEM INVENTORY</h2>
+ 					<h2>AESYSTEM</h2>
  				</div>
  				<br>
  				<br>
