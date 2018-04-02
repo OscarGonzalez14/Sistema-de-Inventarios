@@ -59,7 +59,7 @@
 
                            case "2";
                            ?>
-                           <h4>El usuario se ha agregado</h4>
+                           <h4>El usuario se ha agregado Exitosamente</h4>
                            <?php
                            break;
                          }

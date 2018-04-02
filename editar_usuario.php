@@ -1,4 +1,3 @@
-
 <?php
 
  require_once("class/config.php");
@@ -18,11 +17,12 @@
     }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Agregar Usuario</title>
+	<title>Editar Usuario</title>
 	<?php require_once("head.php"); ?>
 
 
@@ -61,12 +61,13 @@
 
                            case "2";
                            ?>
-                           <h6>el usuario se ha agregado</h6>
+                           <h2>el usuario se ha editado</h2>
                            <?php
                            break;
                          }
                        }
 					?>
+					
 	<div class="panel panel-primary">
 
 			<div class="panel-heading">
@@ -106,12 +107,6 @@
 						</div>
 					</div>
 
-					<!--<div class="form-group">
-						<label for="" class="col-sm-2 control-label">Nivel</label>
-						<div class="col-sm-6">
-							<input type="text" name="nivel" class="form-control" placeholder="Ingrese el nivel de usuario" value="/<?php echo $datos[0]["nivel"];?>"/>
-						</div>
-					</div>-->
 
 					<div class="form-group">
 						<label for="" class="col-sm-2 control-label">Contraseña</label>
@@ -150,10 +145,12 @@
 					 </div>
 
  							<input type="hidden" name="grabar" value="si">
+ 							<input type="hidden" name="id" value="<?php echo $datos[0]["id"];?>">
                             <button class="btn btn-success col-sm-offset-2">EDITAR</button>
-			</div><!--pane body-->		
+	
 					
-				</form><!--fin formulario-->			
+				</form><!--fin formulario-->
+							</div><!--pane body-->				
 
 
 					

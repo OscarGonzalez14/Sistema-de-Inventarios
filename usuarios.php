@@ -78,7 +78,8 @@ if (isset($_SESSION["backend_id"])) {
 					    	<td><?php echo $datos[$i]["cargo"]; ?></td>
 					    	<td><?php echo $datos[$i]["nivel"]; ?></td>
 					    	<td><?php echo Conectar::invierte_fecha($datos[$i]["fechaIngreso"]); ?></td>
-					    	<td><center><a class="btn btn-info" href="<?php echo Conectar::ruta();?>editar_usuario.php?id_usuario=<?php echo $datos[$i]["id"];?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"> </span> Editar</a> <a class="btn btn-danger" href="<?php echo Conectar::ruta();?>eliminar_usuario.php?id_usuario=<?php echo $datos[$i]["id"];?>"><span class="glyphicon glyphicon-trash" aria-hidden="true"> </span> Eliminar</a></center></td>
+					    	<td><center><a class="btn btn-info"   href="<?php echo Conectar::ruta();?>editar_usuario.php?id_usuario=<?php echo $datos[$i]["id"];?>">
+                      <span class="glyphicon glyphicon-pencil" aria-hidden="true"> </span> Editar</a> <a class="btn btn-danger" href="<?php echo Conectar::ruta();?>eliminar_usuario.php?id_usuario=<?php echo $datos[$i]["id"];?>"><span class="glyphicon glyphicon-trash" aria-hidden="true"> </span> Eliminar</a></center></td>
 
 
 					    	</tr>
