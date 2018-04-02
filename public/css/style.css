@@ -3,12 +3,12 @@
 /*index*/
 
 body.pagina_index {
-    background: #165387;
+    background: #fff;
 }
 
 .pagina_index h2{
 
-	color:red;
+	color: blue;
 	margin-top:38px;
 	margin-bottom:38px;
 }
