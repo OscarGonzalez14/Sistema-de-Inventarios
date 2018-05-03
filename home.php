@@ -27,8 +27,8 @@ if(isset($_SESSION["backend_id"])){
      <?php require_once("menu_lateral.php") ?>
                 
               </div>
-               
-             </div>
+                   
+              </div>
 
         </div>
 	    

@@ -1,3 +1,9 @@
+    
+
+$(document).ready(function(){
+$('[msj1="tooltip"]').tooltip();   
+$('[msj2="tooltip"]').tooltip();  
+});
 
 	function actualizar_importe()
       {

@@ -8,7 +8,7 @@
 
 			parent::set_names();
 
-			$sql="select*from  clientes order by fecha_cli ASC";
+			$sql="select* from clientes order by id_cliente DESC";
 
 			$sql=$conectar->prepare($sql);
 
@@ -39,7 +39,7 @@
 			$sql->bindValue(1,$_POST["nombre"]);
 			$sql->bindValue(2,$_POST["telefono"]);
 			$sql->bindValue(3,$_POST["direccion"]);
-			$sql->bindValue(4,$_POST["correos"]);
+			$sql->bindValue(4,$_POST["correo"]);
 			$sql->execute();
 
 			$resultado=$sql->fetch(PDO::FETCH_ASSOC);

@@ -40,7 +40,7 @@ if(isset($_SESSION["backend_id"])){
 					  <li><a href="<?php echo Conectar::ruta();?>home.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
 					  <li><a href="<?php echo Conectar::ruta();?>clientes.php"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Clientes</a></li>
 					  <li><a href="<?php echo Conectar::ruta();?>agregar_cliente.php"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Crear Cliente</a></li>
-					  <li><a href="#"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Reporte Clientes</a></li>
+					  <li><a href="reporte_clientes.php"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Reporte Clientes</a></li>
 				</ol>
 				
 			</div><!--Container-cliente-->

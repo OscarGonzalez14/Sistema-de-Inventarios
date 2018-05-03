@@ -53,13 +53,17 @@
 
                            case "1";
                            ?>
-                           <h4>Los campos estan vacios</h4>
+                         <script>
+                         alert("Campos Vacios");
+                         </script>
                            <?php
                            break;
 
                            case "2";
                            ?>
-                           <h4>El usuario se ha agregado Exitosamente</h4>
+                         <script>
+                         alert("El Usuario Se ha agregado Exitosamente");
+                         </script>
                            <?php
                            break;
                          }

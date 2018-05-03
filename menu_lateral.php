@@ -17,6 +17,8 @@
 <li role="presentation" class=""><a class="btn btn-primary ajax-link" href="<?php echo Conectar::ruta();?>configuracion.php"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Configuración</a></li>
 <li role="presentation" class=""><a class="btn btn-primary ajax-link" href="logout.php"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Cerrar Sesión</a></li>
 
+    <img src="public/images/logoAE.jpeg" width="170" height="130">
+
 </ul><!--/.btn-group-vertical -->
         
 	

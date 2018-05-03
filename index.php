@@ -40,8 +40,9 @@ function muestraPass() {
  	<div class="container-fluid">
  		<div class="container">
  			<div class="row">
- 				<div class="col-sm-8 col-sm-offset-3">
- 					<h3> &nbsp;&nbsp;&nbsp;&nbsp;AESYSTEM INVENTORY</h3>
+ 				<div class="col-sm-8 col-sm-offset-4">
+ 					
+ 					<img src="public/images/logoAE.jpeg" width="250" height="200">
  				</div>
  				<br>
  				<br>

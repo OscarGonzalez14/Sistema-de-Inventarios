@@ -10751,7 +10751,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoFiltered": "(filtered from _MAX_ total entries)",
+			"sInfoFiltered": "(filrado de _MAX_ registros)",
 	
 	
 			/**

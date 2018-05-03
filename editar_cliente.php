@@ -23,7 +23,7 @@
 	<title>Agregar Cliente</title>
 	<?php require_once("head.php"); ?>
 
-	
+
 </head>
 <body>
 	<div class="container-fluid"><!--fluid1-->
@@ -39,9 +39,9 @@
 
 				<div class="panel-cliente">
 					<ul class="breadcrumb">
-					  <li><a msj1="tooltip" title="Regresa al Menú Principal" href="<?php echo Conectar::ruta(); ?>home.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Principal</a></li>
-					  <li><a msj3="tooltip" title="Listado General de clientes" href="<?php echo Conectar::ruta(); ?>clientes.php"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Clientes</a></li>
-					  <li><a msj2="tooltip" title="Generar pdf de Clientes" href="reporte_clientes.php"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Reporte Clientes</a></li>
+					  <li><a href="<?php echo Conectar::ruta(); ?>home.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Principal</a></li>
+					  <li><a href="<?php echo Conectar::ruta(); ?>clientes.php"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Clientes</a></li>
+					  <li><a href="reporte_clientes.php"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Reporte Clientes</a></li>
 					  <li>Crear Clientes</li>
 					</ul>
 				</div><!--Fin del Breadcrumb-->
@@ -54,17 +54,13 @@
 
                            case "1";
                            ?>
-                         <script>
-                         alert("Campos Vacios");
-                         </script>
+                           <h4>Los campos estan vacios</h4>
                            <?php
                            break;
 
                            case "2";
                            ?>
-                         <script>
-                         alert("El Cliente Se ha agregado Exitosamente");
-                         </script>
+                           <h4>El Cliente se ha agregado Exitosamente</h4>
                            <?php
                            break;
                          }
