@@ -54,7 +54,7 @@
                            case "1";
                            ?>
                          <script>
-                         alert("Campos Vacios");
+                         alert("-Campos Vacios"+"\n-Podria ser que no halla completado algun campo del formulario");
                          </script>
                            <?php
                            break;
@@ -63,6 +63,7 @@
                            ?>
                          <script>
                          alert("El Usuario Se ha agregado Exitosamente");
+
                          </script>
                            <?php
                            break;
@@ -73,7 +74,7 @@
 	<div class="panel panel-primary">
 
 		<div class="panel-heading">
-			<h3 class="panel-title"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Agregar Usuarios</h3>
+			<h3 class="panel-title"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Agregar Usuarios </h3>
 		</div>				
 			<div class="panel-body">	
 				<form action="" method="post" class="form-horizontal">

@@ -9,7 +9,7 @@
  <script type="text/javascript" src="<?php echo Conectar::ruta();?>public/js/jquery-1.11.2.min.js" language="javascript"></script>
 
 
- <script type="text/javascript" src="<?php echo Conectar::ruta();?>public/js/funciones.js" language="javascript"></script>
+
 
 
 
