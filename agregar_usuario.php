@@ -23,6 +23,15 @@
 	<title>Agregar Usuario</title>
 	<?php require_once("head.php"); ?>
 
+	<script>
+		function validar(){
+		valor = document.getElementById("dui").value;
+		if( !(/^\d{8}-\d{1}$/.test(valor)) ) {
+ 		return false;
+}
+}
+	</script>
+
 
 </head>
 <body>
@@ -53,18 +62,20 @@
 
                            case "1";
                            ?>
-                         <script>
-                         alert("-Campos Vacios"+"\n-Podria ser que no halla completado algun campo del formulario");
-                         </script>
+<div class="alert alert-danger alert-dismissable">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>¡Atencion!</strong> Existen campos vacios.
+  <a  msj1="tooltip" title="Pueda que exista un campo en blanco" align="right" href="#" class="alert-link"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Ayuda</a>
+</div>
                            <?php
                            break;
 
                            case "2";
                            ?>
-                         <script>
-                         alert("El Usuario Se ha agregado Exitosamente");
-
-                         </script>
+<div class="alert alert-success alert-dismissable">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>¡Cuidado!</strong> Es muy importante que leas este mensaje de alerta.
+</div>
                            <?php
                            break;
                          }
@@ -75,14 +86,14 @@
 
 		<div class="panel-heading">
 			<h3 class="panel-title"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Agregar Usuarios </h3>
-		</div>				
+		</div>			
 			<div class="panel-body">	
 				<form action="" method="post" class="form-horizontal">
 
 					<div class="form-group">
 						<label for="" class="col-sm-2 control-label">DUI</label>
 						<div class="col-sm-4">
-							<input type="text" name="dui" class="form-control" placeholder="Ingrese su DUI"/>
+							<input type="text" name="dui" class="form-control" placeholder="Ingrese su DUI" onsubmit="return validar()"/>
 						</div>
 					</div>
 
@@ -139,7 +150,7 @@
 									<option value="ADMINISTRADOR">ADMINISTRADOR</option>
 									<option value="BODEGUERO">BODEGUERO</option>
 									<option value="CONTADOR">CONTADOR</option>
-									
+									      
 								</select>
 							</div>
 					 </div>
