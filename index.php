@@ -53,9 +53,35 @@ function muestraPass() {
  			</div><!--row-->
  		</div><!--Container-->
 
+
  		<div class="container">
  			<div class="row">
  				<div class="col-sm-5 col-sm-offset-3">
+
+ 			<?php if(isset($_GET["m"])){
+
+            switch($_GET["m"]){
+
+             case "1";
+                        	?>
+				<div class="alert alert-danger alert-dismissable">
+				  <button type="button" class="close" data-dismiss="alert">&times;</button>
+				  <strong>Error:</strong> Ups! FALLO LA AUTENTICACION.
+				  <a  msj1="tooltip" title="Pueda que sus credenciales esten incorrectas" align="right" href="#" class="alert-link"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Ayuda</a>
+				</div>
+                        	<?php
+                        	break;
+
+                        	case "2";
+                        	?>
+                        	<h2>se ha agregado el proveedor</h2>
+                        	<?php
+                        	break;
+                        }
+
+
+		  			}?>
+
  					<form action="" method="post">
  						<div class="form-group">
  							<label for="">Usuario</label>

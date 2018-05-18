@@ -74,7 +74,7 @@
                            ?>
 <div class="alert alert-success alert-dismissable">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <strong>¡Cuidado!</strong> Es muy importante que leas este mensaje de alerta.
+  <strong>¡Excelente!</strong> Usuario agregado Exitosamente.
 </div>
                            <?php
                            break;
@@ -93,7 +93,7 @@
 					<div class="form-group">
 						<label for="" class="col-sm-2 control-label">DUI</label>
 						<div class="col-sm-4">
-							<input type="text" name="dui" class="form-control" placeholder="Ingrese su DUI" onsubmit="return validar()"/>
+							<input type="text" name="dui" class="form-control" placeholder="Ingrese su DUI" />
 						</div>
 					</div>
 

@@ -1,9 +1,18 @@
 <?php 
-require_once("class/config.php");
 
-if(isset($_SESSION["backend_id"])){
+ require_once("class/config.php");
 
+  if(isset($_SESSION["backend_id"])){
+  
+  if(isset($_POST["grabar"]) and $_POST["grabar"]=="si") {
 
+    require_once("class/proveedoresModulo.php");
+
+    $proveedor= new Proveedores();
+
+    $proveedor->agregar_proveedor();
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +48,31 @@ if(isset($_SESSION["backend_id"])){
 						</ol>
 					</div>
 					
+
+		  			<?php if(isset($_GET["m"])){
+
+                        switch($_GET["m"]){
+
+                        	case "1";
+                        	?>
+				<div class="alert alert-danger alert-dismissable">
+				  <button type="button" class="close" data-dismiss="alert">&times;</button>
+				  <strong>¡Atencion!</strong> Existen campos vacios.
+				  <a  msj1="tooltip" title="Pueda que exista un campo en blanco" align="right" href="#" class="alert-link"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Ayuda</a>
+				</div>
+                        	<?php
+                        	break;
+
+                        	case "2";
+                        	?>
+                        	<h2>se ha agregado el proveedor</h2>
+                        	<?php
+                        	break;
+                        }
+
+
+		  			}?>
+
 					<div class="panel panel-primary">
 
 						<div class="panel-heading">
@@ -52,28 +86,28 @@ if(isset($_SESSION["backend_id"])){
 								<div class="form-group">
 									<label for="" class="control-label col-sm-2">Nombre Proveedor</label>
 									<div class="col-sm-6">
-										<input type="text" name="nombre_proveedor" class="form-control" placeholder="Escriba el Nombre del Proveedor">
+										<input type="text" name="nombreProveedor" class="form-control" placeholder="Escriba el Nombre del Proveedor">
 									</div>
 								</div>
 
 								<div class="form-group">
 									<label for="" class="control-label col-sm-2">TelefonoProveedor</label>
 									<div class="col-sm-6">
-										<input type="text" name="telefono_proveedor" class="form-control" placeholder="Escriba el telefono del Proveedor">
+										<input type="text" name="telefonoProveedor" class="form-control" placeholder="Escriba el telefono del Proveedor">
 									</div>
 								</div>
 
 								<div class="form-group">
 									<label for="" class="control-label col-sm-2">Correo</label>
 									<div class="col-sm-6">
-										<input type="text" name="correo_proveedor" class="form-control" placeholder="Escriba el Correo del Proveedor">
+										<input type="text" name="correo" class="form-control" placeholder="Escriba el Correo del Proveedor">
 									</div>
 								</div>
 
 								<div class="form-group">
 									<label for="" class="control-label col-sm-2">Contacto</label>
 									<div class="col-sm-6">
-										<input type="text" name="nombre_contacto" class="form-control" placeholder="Escriba el Nombre del Contacto">
+										<input type="text" name="nom_contacto" class="form-control" placeholder="Escriba el Nombre del Contacto">
 									</div>
 								</div>
 

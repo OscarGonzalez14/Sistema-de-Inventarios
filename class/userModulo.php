@@ -32,7 +32,8 @@ class Usuarios extends Conectar
 			exit();
 			
 		}else{
-			header("Location:".Conectar::ruta()."index.php");
+
+			header("Location:".Conectar::ruta()."index.php?m=1");
 
 			exit();
 		}

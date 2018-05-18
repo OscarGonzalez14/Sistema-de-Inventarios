@@ -104,7 +104,7 @@
 					<div class="form-group">
 						<label for="" class="col-sm-2 control-label">Correo</label>
 						<div class="col-sm-6">
-							<input type="text" name="correo" class="form-control" placeholder="Ingrese correo del cliente"/>
+							<input type="email" name="correo" class="form-control" placeholder="Ingrese correo del cliente"/ required>
 						</div>
 					</div>
 
