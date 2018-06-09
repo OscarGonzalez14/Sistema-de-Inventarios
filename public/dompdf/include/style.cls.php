@@ -1418,6 +1418,9 @@ class Style {
     $this->_props["color"] = $col["hex"];
   }
 
+
+
+
   /**
    * Sets the background colour
    *

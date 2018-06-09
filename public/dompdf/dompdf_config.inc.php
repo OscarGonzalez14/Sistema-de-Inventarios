@@ -12,7 +12,7 @@
 //error_reporting(E_STRICT | E_ALL | E_DEPRECATED);
 //ini_set("display_errors", 1);
 
-PHP_VERSION >= 5.0 or die("DOMPDF requires PHP 5.0+");
+PHP_VERSION >= 7.0 or die("DOMPDF requires PHP 7.0+");
 
 /**
  * The root of your DOMPDF installation

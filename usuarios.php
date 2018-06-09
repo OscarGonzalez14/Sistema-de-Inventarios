@@ -98,7 +98,7 @@ if (isset($_SESSION["backend_id"])) {
 				</div><!--div fluid2-->
 		
 	<?php require_once("footer_js_tabla.php");  ?>			
-	</div><!--div fluid1-->
+</div><!--div fluid1-->
 
 
 </body>

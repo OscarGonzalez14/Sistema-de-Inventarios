@@ -1,25 +1,28 @@
 <?php 
-
  require_once("class/config.php");
 
   if(isset($_SESSION["backend_id"])){
-  
-  if(isset($_POST["grabar"]) and $_POST["grabar"]=="si") {
 
-    require_once("class/proveedoresModulo.php");
+  	require_once("class/proveedoresModulo.php");
 
     $proveedor= new Proveedores();
 
-    $proveedor->agregar_proveedor();
+    $datos=$proveedor->get_proveedor_por_id($_GET["id_proveedor"]);
+  
+  if(isset($_POST["grabar"]) and $_POST["grabar"]=="si") {
+
+    $proveedor->editar_proveedor();
     exit();
-}
+
+ }
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>agregar Proveedor</title>
+	<title>Editar Proveedor</title>
 
 	<?php require_once("head.php");?>
 </head>
@@ -65,11 +68,11 @@
 
                         	case "2";
                         	?>
-				<div class="alert alert-success alert-dismissable">
-				  <button type="button" class="close" data-dismiss="alert">&times;</button>
-				  <strong>¡Atencion!</strong> El proveedor ha sido Agregado<strong>Exitosamente</strong>.
-				  <a  msj1="tooltip" title="Pueda que exista un campo en blanco" align="right" href="#" class="alert-link"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Ayuda</a>
-				</div>
+						<div class="alert alert-success alert-dismissable">
+						  <button type="button" class="close" data-dismiss="alert">&times;</button>
+						  <strong>¡Atencion!</strong> Se ha editado el Proveedor exitosamente.
+						  <a  msj1="tooltip" title="Presione 'x' para cerrar este mensaje" align="right" href="#" class="alert-link"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Ayuda</a>
+						</div>
                         	<?php
                         	break;
                         }
@@ -80,7 +83,7 @@
 					<div class="panel panel-primary">
 
 						<div class="panel-heading">
-							<h3 class="panel-title">Agregar Proveedor</h3>
+							<h3 class="panel-title">Editar Proveedor</h3>
 						</div>
 
 						<div class="panel-body">
@@ -90,33 +93,36 @@
 								<div class="form-group">
 									<label for="" class="control-label col-sm-2">Nombre Proveedor</label>
 									<div class="col-sm-6">
-										<input type="text" name="nombreProveedor" class="form-control" placeholder="Escriba el Nombre del Proveedor">
+										<input type="text" name="nombreProveedor" class="form-control" placeholder="Escriba el Nombre del Proveedor" value="<?php echo $datos[0]["nombreProveedor"]; ?>">
 									</div>
 								</div>
 
 								<div class="form-group">
 									<label for="" class="control-label col-sm-2">TelefonoProveedor</label>
 									<div class="col-sm-6">
-										<input type="text" name="telefonoProveedor" class="form-control" placeholder="Escriba el telefono del Proveedor">
+										<input type="text" name="telefonoProveedor" class="form-control" placeholder="Escriba el telefono del Proveedor" value="<?php echo $datos[0]["telefonoProveedor"]; ?>">
 									</div>
 								</div>
 
 								<div class="form-group">
 									<label for="" class="control-label col-sm-2">Correo</label>
 									<div class="col-sm-6">
-										<input type="text" name="correo" class="form-control" placeholder="Escriba el Correo del Proveedor">
+										<input type="text" name="correo" class="form-control" placeholder="Escriba el Correo del Proveedor" value="<?php echo $datos[0]["correo"]; ?>">
 									</div>
 								</div>
 
 								<div class="form-group">
 									<label for="" class="control-label col-sm-2">Contacto</label>
 									<div class="col-sm-6">
-										<input type="text" name="nom_contacto" class="form-control" placeholder="Escriba el Nombre del Contacto">
+										<input type="text" name="nom_contacto" class="form-control" placeholder="Escriba el Nombre del Contacto" value="<?php echo $datos[0]["nom_contacto"]; ?>">
 									</div>
 								</div>
 
 							<input type="hidden" name="grabar" value="si">
-                            <button class="btn btn-primary col-sm-offset-2">REGISTRAR</button>
+
+							<input type="hidden" name="id" value="<?php echo $_GET["id_proveedor"];?>">
+
+                            <button class="btn btn-primary col-sm-offset-2">EDITAR</button>
 							</form>
 							
 						</div>
